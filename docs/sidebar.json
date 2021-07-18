@@ -1,6 +1,7 @@
 {
   "fastai_saint": {
     "Overview": "/",
-    "Tabular Augmentations": "augment.html"
+    "Tabular Augmentations": "augment.html",
+    "SAINT Experiments": "stream_notebook.html"
   }
 }

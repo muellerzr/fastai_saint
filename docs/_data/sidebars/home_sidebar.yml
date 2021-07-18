@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: Tabular Augmentations
       url: augment.html
+    - output: web,pdf
+      title: SAINT Experiments
+      url: stream_notebook.html
     output: web
     title: fastai_saint
   output: web
