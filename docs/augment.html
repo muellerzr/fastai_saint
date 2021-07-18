@@ -71,6 +71,15 @@ nb_path: "01_augment.ipynb"
 <h4 id="embed_data_mask" class="doc_header"><code>embed_data_mask</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/augmentation.py#L13" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>embed_data_mask</code>(<strong><code>x_cat</code></strong>:<code>Tensor</code>, <strong><code>x_cont</code></strong>:<code>Tensor</code>, <strong><code>cat_mask</code></strong>:<code>Tensor</code>, <strong><code>cont_mask</code></strong>:<code>Tensor</code>, <strong><code>net</code></strong>, <strong><code>vision_dset</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>Embed and mask the data through the embeddings with MLP attention</p>
+<p><strong>Function Arguments</strong>:</p>
+<ul>
+<li><code>x_cat</code> (<code>torch.Tensor</code>): Input categorical features</li>
+<li><code>x_cont</code> (<code>torch.Tensor</code>): Input continouous features</li>
+<li><code>cat_mask</code> (<code>torch.Tensor</code>): Mask of categorical inputs</li>
+<li><code>cont_mask</code> (<code>torch.Tensor</code>): Mask of continouous inputs</li>
+<li><code>net</code>: The SAINT architecture</li>
+<li><code>vision_dset</code>: Is the dataset a vision dataset</li>
+</ul>
 
 </div>
 
@@ -109,6 +118,14 @@ nb_path: "01_augment.ipynb"
 <h4 id="SAINTMixUp" class="doc_header"><code>SAINTMixUp</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/augmentation.py#L56" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>SAINTMixUp</code>(<strong><code>x1</code></strong>:<code>Tensor</code>, <strong><code>x2</code></strong>:<code>Tensor</code>, <strong><code>lam</code></strong>:<code>float</code>=<em><code>1</code></em>, <strong><code>y</code></strong>:<code>Tensor</code>=<em><code>None</code></em>, <strong><code>use_cuda</code></strong>:<code>bool</code>=<em><code>True</code></em>)</p>
 </blockquote>
 <p>Mixing up inputs, and returning a pair of targets</p>
+<p><strong>Function Arguments</strong>:</p>
+<ul>
+<li><code>x1</code> (<code>torch.Tensor</code>): One tensor in a batch</li>
+<li><code>x2</code> (<code>torch.Tensor</code>): Another random tensor in a batch</li>
+<li><code>lam</code> (<code>float</code>): Lambda to apply on inputs</li>
+<li><code>y</code> (<code>torch.Tensor</code>): Targets</li>
+<li><code>use_cuda</code> (<code>bool</code>): Whether to perform action on the GPU</li>
+</ul>
 
 </div>
 
@@ -141,6 +158,12 @@ nb_path: "01_augment.ipynb"
 <h4 id="SAINTCutMix" class="doc_header"><code>SAINTCutMix</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/augmentation.py#L83" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>SAINTCutMix</code>(<strong><code>x_cat</code></strong>:<code>Tensor</code>, <strong><code>x_cont</code></strong>:<code>Tensor</code>, <strong><code>lam</code></strong>:<code>float</code>=<em><code>0.1</code></em>)</p>
 </blockquote>
 <p>Applies <code>CutMix</code> on the <code>x's</code>, noisifying the data</p>
+<p><strong>Function Arguments</strong>:</p>
+<ul>
+<li><code>x_cat</code> (<code>torch.Tensor</code>): One batch of categorical data</li>
+<li><code>x_cont</code> (<code>torch.Tensor</code>): One batch of continuous data</li>
+<li><code>lam</code> (<code>float</code>): Lambda to apply on inputs</li>
+</ul>
 
 </div>
 
