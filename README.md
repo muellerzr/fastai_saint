@@ -1,18 +1,25 @@
-# fastai_saint
-Example of using the SAINT architecture in fastai
 
-## What is this repo?
+# Project name here
+> Summary description here.
 
-This repo is the works of my integration of the [SAINT](https://github.com/somepago/saint) archecture into the fastai ecosystem, and various experiments as well.
 
-## Where are you doing the work?
+This file will become your README and also the index of your documentation.
 
-I live stream on my [YouTube channel](https://www.youtube.com/channel/UCmKoQOD8uBqsRS8XDdSgrlQ), and to keep up with announcements please follow me on [Twitter](https://twitter.com/TheZachMueller) for when the next one is scheduled. I'll be doing various streams until the integration is finished. 
+## Install
 
-## Past Streams:
+`pip install your_project_name`
 
-6/11/2021: https://www.youtube.com/channel/UCmKoQOD8uBqsRS8XDdSgrlQ
-6/13/2021: https://www.youtube.com/watch?v=RoQTm8L1Rq0
+## How to use
 
-# Thank you!
-I just wanted to reserve a special thank you section, as (at the *least*) we had one of the main authors and the host of the source code join us in the stream as we were debugging, answering questions and helping us out when we were confused. Thank you Gowthami Somepalli!
+Fill me in please! Don't forget code examples:
+
+```
+1+1
+```
+
+
+
+
+    2
+
+
