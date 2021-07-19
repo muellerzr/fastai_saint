@@ -13,6 +13,9 @@ entries:
       title: Tabular Augmentations
       url: augment.html
     - output: web,pdf
+      title: Model Foundations
+      url: models.core.html
+    - output: web,pdf
       title: SAINT Experiments
       url: stream_notebook.html
     output: web

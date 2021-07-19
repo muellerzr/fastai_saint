@@ -4,9 +4,23 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"embed_data_mask": "01_augment.ipynb",
          "SAINTMixUp": "01_augment.ipynb",
-         "SAINTCutMix": "01_augment.ipynb"}
+         "SAINTCutMix": "01_augment.ipynb",
+         "exists": "02_models.core.ipynb",
+         "default": "02_models.core.ipynb",
+         "ff_encodings": "02_models.core.ipynb",
+         "Residual": "02_models.core.ipynb",
+         "PreNorm": "02_models.core.ipynb",
+         "GEGLU": "02_models.core.ipynb",
+         "FeedForward": "02_models.core.ipynb",
+         "Attention": "02_models.core.ipynb",
+         "RowColAttention": "02_models.core.ipynb",
+         "Transformer": "02_models.core.ipynb",
+         "MLP": "02_models.core.ipynb",
+         "SimpleMLP": "02_models.core.ipynb",
+         "TabAttention": "02_models.core.ipynb"}
 
-modules = ["augmentation.py"]
+modules = ["augmentation.py",
+           "models/core.py"]
 
 doc_url = "https://muellerzr.github.io/fastai_saint/"
 

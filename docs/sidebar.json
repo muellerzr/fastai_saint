@@ -2,6 +2,7 @@
   "fastai_saint": {
     "Overview": "/",
     "Tabular Augmentations": "augment.html",
+    "Model Foundations": "models.core.html",
     "SAINT Experiments": "stream_notebook.html"
   }
 }
