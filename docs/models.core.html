@@ -235,35 +235,6 @@ nb_path: "02_models.core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="Residual.__init__" class="doc_header"><code>Residual.__init__</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L46" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Residual.__init__</code>(<strong><code>fn</code></strong>:<code>callable</code>)</p>
-</blockquote>
-<p>A layer that adds a residual <code>fn</code> to x</p>
-<p><strong>Function Arguments</strong>:</p>
-<ul>
-<li><code>fn</code> (<code>callable</code>): A function to generate a residual</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
 <h4 id="Residual.forward" class="doc_header"><code>Residual.forward</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L53" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Residual.forward</code>(<strong><code>x</code></strong>:<code>tensor</code>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 <p>Applies <code>self.fn</code> to x</p>
@@ -316,36 +287,6 @@ nb_path: "02_models.core.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="PreNorm.__init__" class="doc_header"><code>PreNorm.__init__</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L63" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>PreNorm.__init__</code>(<strong><code>dim</code></strong>:<code>int</code>, <strong><code>fn</code></strong>:<code>callable</code>)</p>
-</blockquote>
-<p>Layer norm that is applied before calling a residual function</p>
-<p><strong>Function Arguments</strong>:</p>
-<ul>
-<li><code>dim</code> (<code>int</code>): LayerNorm dimension</li>
-<li><code>fn</code> (<code>callable</code>): Residual function</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
 
 </div>
     {% endraw %}
@@ -585,38 +526,6 @@ model = nn.Sequential(OrderedDict([
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="Attention.__init__" class="doc_header"><code>Attention.__init__</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L117" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Attention.__init__</code>(<strong><code>dim</code></strong>:<code>int</code>, <strong><code>heads</code></strong>:<code>int</code>=<em><code>8</code></em>, <strong><code>dim_head</code></strong>:<code>int</code>=<em><code>16</code></em>, <strong><code>dropout</code></strong>:<code>float</code>=<em><code>0.0</code></em>)</p>
-</blockquote>
-<p>A basic attention wrt module</p>
-<p><strong>Function Arguments</strong>:</p>
-<ul>
-<li><code>dim</code> (<code>int</code>): Dimension for the Linear groups</li>
-<li><code>heads</code> (<code>int</code>): Number of attention heads</li>
-<li><code>dim_head</code> (<code>int</code>): Dimension of the attention heads</li>
-<li><code>dropout</code> (<code>float</code>): Dropout probability</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
 <h4 id="Attention.forward" class="doc_header"><code>Attention.forward</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L134" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Attention.forward</code>(<strong><code>x</code></strong>:<code>tensor</code>)</p>
 </blockquote>
 <p>Applies attention to <code>x</code></p>
@@ -722,43 +631,6 @@ model = nn.Sequential(OrderedDict([
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="RowColAttention.__init__" class="doc_header"><code>RowColAttention.__init__</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L154" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>RowColAttention.__init__</code>(<strong><code>num_tokens</code></strong>:<code>int</code>, <strong><code>dim</code></strong>:<code>int</code>, <strong><code>nfeats</code></strong>:<code>int</code>, <strong><code>depth</code></strong>:<code>int</code>, <strong><code>heads</code></strong>:<code>int</code>, <strong><code>dim_head</code></strong>:<code>int</code>=<em><code>16</code></em>, <strong><code>attn_dropout</code></strong>:<code>float</code>=<em><code>0.0</code></em>, <strong><code>ff_dropout</code></strong>:<code>float</code>=<em><code>0.0</code></em>, <strong><code>style</code></strong>:<code>AttentionType</code>=<em><code>'col'</code></em>)</p>
-</blockquote>
-<p>A small Transformer that generates attention based on a row and column</p>
-<p><strong>Function Arguments</strong>:</p>
-<ul>
-<li><code>num_tokens</code> (<code>int</code>): Size of the categorical embeddings</li>
-<li><code>dim</code> (<code>int</code>): Dimension of the two Embedding layers</li>
-<li><code>nfeats</code> (<code>int</code>): Number of continuous features</li>
-<li><code>depth</code> (<code>int</code>): The number of attention modules to generate</li>
-<li><code>heads</code> (<code>int</code>): Number of attention heads</li>
-<li><code>dim_head</code> (<code>int</code>): Dimension of the attention heads</li>
-<li><code>attn_dropout</code> (<code>float</code>): Dropout probability in the attention module</li>
-<li><code>ff_dropout</code> (<code>float</code>): Dropout probability for the feed forward layers</li>
-<li><code>style</code> (<code>AttentionType</code>): Attention style</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
 <h4 id="RowColAttention.forward" class="doc_header"><code>RowColAttention.forward</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L187" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>RowColAttention.forward</code>(<strong><code>x</code></strong>, <strong><code>x_cont</code></strong>=<em><code>None</code></em>, <strong><code>mask</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Applies an attention mechanism on inputs</p>
@@ -831,41 +703,6 @@ model = nn.Sequential(OrderedDict([
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="Transformer.__init__" class="doc_header"><code>Transformer.__init__</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L215" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Transformer.__init__</code>(<strong><code>num_tokens</code></strong>:<code>int</code>, <strong><code>dim</code></strong>:<code>int</code>, <strong><code>depth</code></strong>:<code>int</code>, <strong><code>heads</code></strong>:<code>int</code>, <strong><code>dim_head</code></strong>:<code>int</code>=<em><code>16</code></em>, <strong><code>attn_dropout</code></strong>:<code>float</code>=<em><code>0.0</code></em>, <strong><code>ff_dropout</code></strong>:<code>float</code>=<em><code>0.0</code></em>)</p>
-</blockquote>
-<p>A basic feed forward Transformer module with attention</p>
-<p><strong>Function Arguments</strong>:</p>
-<ul>
-<li><code>num_tokens</code> (<code>int</code>): Size of the categorical embeddings in the <code>Attention</code> layer</li>
-<li><code>dim</code> (<code>int</code>): Dimension of the two Embedding layers in the <code>Attention</code> layer</li>
-<li><code>depth</code> (<code>int</code>): The number of attention modules to generate in the <code>Attention</code> layer</li>
-<li><code>heads</code> (<code>int</code>): Number of attention heads in the <code>Attention</code> layer</li>
-<li><code>dim_head</code> (<code>int</code>): Dimension of the attention heads in the <code>Attention</code> layer</li>
-<li><code>attn_dropout</code> (<code>float</code>): Dropout probability in the <code>Attention</code> layer</li>
-<li><code>ff_dropout</code> (<code>float</code>): Dropout probability for the feed forward layers</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
 <h4 id="Transformer.forward" class="doc_header"><code>Transformer.forward</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L235" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Transformer.forward</code>(<strong><code>x</code></strong>, <strong><code>x_cont</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Applies attention to inputs</p>
@@ -917,35 +754,6 @@ model = nn.Sequential(OrderedDict([
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="MLP.__init__" class="doc_header"><code>MLP.__init__</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L250" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>MLP.__init__</code>(<strong><code>dims</code></strong>:<code>list</code>, <strong><code>act</code></strong>=<em><code>None</code></em>)</p>
-</blockquote>
-<p>A basic multi-layer perceptron module</p>
-<p><strong>Function Arguments</strong>:</p>
-<ul>
-<li><code>dims</code> (<code>list</code>): A list of dimensions for the module</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
 
 </div>
     {% endraw %}
@@ -1032,35 +840,6 @@ model = nn.Sequential(OrderedDict([
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="SimpleMLP.__init__" class="doc_header"><code>SimpleMLP.__init__</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L279" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>SimpleMLP.__init__</code>(<strong><code>dims</code></strong>:<code>list</code>)</p>
-</blockquote>
-<p>Simplified multi-layer perceptron</p>
-<p><strong>Function Arguments</strong>:</p>
-<ul>
-<li><code>dims</code> (<code>list</code>): A list of three dimensions for our MLP module</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
 
 </div>
     {% endraw %}
@@ -1169,48 +948,6 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="TabAttention.__init__" class="doc_header"><code>TabAttention.__init__</code><a href="https://github.com/muellerzr/fastai_saint/tree/main/fastai_saint/models/core.py#L305" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>TabAttention.__init__</code>(<strong><code>categories</code></strong>:<code>list</code>, <strong><code>num_continuous</code></strong>:<code>int</code>, <strong><code>dim</code></strong>:<code>int</code>, <strong><code>depth</code></strong>:<code>int</code>, <strong><code>heads</code></strong>:<code>int</code>, <strong><code>dim_head</code></strong>:<code>int</code>=<em><code>16</code></em>, <strong><code>dim_out</code></strong>:<code>int</code>=<em><code>1</code></em>, <strong><code>mlp_hidden_mults</code></strong>:<code>Tuple</code>[<code>int</code>]=<em><code>(4, 2)</code></em>, <strong><code>mlp_act</code></strong>=<em><code>None</code></em>, <strong><code>num_special_tokens</code></strong>:<code>int</code>=<em><code>1</code></em>, <strong><code>attn_dropout</code></strong>:<code>float</code>=<em><code>0.0</code></em>, <strong><code>ff_dropout</code></strong>:<code>float</code>=<em><code>0.0</code></em>, <strong><code>lastmlp_dropout</code></strong>:<code>float</code>=<em><code>0.0</code></em>, <strong><code>cont_embeddings</code></strong>:<code>str</code>=<em><code>'MLP'</code></em>, <strong><code>attention_style</code></strong>:<code>AttentionType</code>=<em><code>'col'</code></em>)</p>
-</blockquote>
-<p>Initializes internal Module state, shared by both nn.Module and ScriptModule.</p>
-<p><strong>Function Arguments</strong>:</p>
-<ul>
-<li><code>categories</code> (<code>list</code>): List of categorical cardinalities</li>
-<li><code>num_continuous</code> (<code>int</code>): Number of continuous variables</li>
-<li><code>dim</code> (<code>int</code>): MLP dimension</li>
-<li><code>depth</code> (<code>int</code>): Transformer depth</li>
-<li><code>heads</code> (<code>int</code>): Number of attention heads</li>
-<li><code>dim_head</code> (<code>int</code>): Size of the attention head</li>
-<li><code>dim_out</code> (<code>int</code>): Size of the last linear layer</li>
-<li><code>mlp_hidden_mults</code> (<code>Tuple[int]</code>): Multipliers for the MLP hidden layers</li>
-<li><code>num_special_tokens</code> (<code>int</code>): Number of special tokens for the categories</li>
-<li><code>attn_dropout</code> (<code>float</code>): Dropout probability for the attention module</li>
-<li><code>ff_dropout</code> (<code>float</code>): Dropout probability for the feed forward layers</li>
-<li><code>lastmlp_dropout</code> (<code>float</code>): Dropout probability for the final MLP group</li>
-<li><code>cont_embeddings</code> (<code>str</code>): Type of embeddings for the continouous variables, only <code>MLP</code> is available. If <code>None</code> no attention is applied</li>
-<li><code>attention_style</code> (<code>AttentionType</code>): Attention style</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
 
 </div>
     {% endraw %}
